@@ -16,11 +16,11 @@ public:
     else
     {name = n; age = a; price = p;}
     //howManyCars++;
-    cout<<endl<<"Liczba samochodow:"<<howManyCars<<endl;
+    //cout<<endl<<"Liczba samochodow:"<<howManyCars<<endl;
   }
   ~Car()
   {
-    cout<<"Usunieto"<<endl;
+    cout<<"Destruktor dziala"<<endl;
     //howManyCars--;
   }
   void show()
@@ -29,15 +29,17 @@ public:
   }
   void ratio()
   {
-    cout<<endl<<"Price/Age = "<<price/age<<endl;
+    cout<<endl<<"Proporcja ceny do wieku samochodu "<<name<<" = "<<price/age<<endl;
   }
 };
 
 int main()
 {
   Car c1("Opel",10,5000);
-  Car c2("Astra",25,5000);
+  Car c2("Astra",25,7000);
   c1.show();
   c2.show();
+  c1.ratio();
+  c2.ratio();
   return 0;
 }
