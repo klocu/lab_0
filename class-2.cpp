@@ -2,6 +2,36 @@
 
 using namespace std;
 
+class Bus{
+private:
+  int seats;
+  int money;
+  int minutes;
+public:
+  Bus(int s , int mo, int mi)
+  {
+    if(mo<0||s<1||mi<0) cout<<"Zle dane";
+    else
+    {seats = s; money = mo; minutes = mi;}
+  }
+  ~Bus()
+  {
+    cout<<"Bus destroyed"<<endl;
+  }
+  void worth()
+  {
+    cout<<"Wybierajac autobus oszczedzasz "<<money<<" zlotych ,ale tracisz "<<minutes<<" minut "<<endl;
+    if(seats>50)
+    {
+      cout<<"Duża szansa na wolne miejsce"<<endl;
+    }
+    else
+    {
+      cout<<"Raczej nie posiedzisz"<<endl;
+    }
+  }
+};
+
 class Car{
 private:
   int age;
@@ -30,36 +60,6 @@ public:
   void ratio()
   {
     cout<<endl<<"Proporcja ceny do wieku samochodu "<<name<<" = "<<price/age<<endl;
-  }
-};
-
-class Bus{
-private:
-  int seats;
-  int money;
-  int minutes;
-public:
-  Bus(int s , int mo, int mi)
-  {
-    if(mo<0||s<1||mi<0) cout<<"Zle dane";
-    else
-    {seats = s; money = mo; minutes = mi;}
-  }
-  ~Bus()
-  {
-    cout<<"Bus destroyed"<<endl;
-  }
-  void worth()
-  {
-    cout<<"Wybierajac autobus oszczedzasz "<<money<<" zlotych ,ale tracisz "<<minutes<<" minut "<<endl;
-    if(seats>50)
-    {
-      cout<<"Duża szansa na wolne miejsce"<<endl;
-    }
-    else
-    {
-      cout<<"Raczej nie posiedzisz"<<endl;
-    }
   }
 };
 
