@@ -65,6 +65,7 @@ public:
 
 int main()
 {
+  while(true);
   int* tab = new int[60];
   Car c1("Opel",10,5000);
   Car c2("Astra",25,7000);
