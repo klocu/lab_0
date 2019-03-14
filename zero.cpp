@@ -65,7 +65,7 @@ public:
 
 int main()
 {
-  int* tab = new int[20];
+  int* tab = new int[60];
   Car c1("Opel",10,5000);
   Car c2("Astra",25,7000);
   Bus b1(51,7,45);
